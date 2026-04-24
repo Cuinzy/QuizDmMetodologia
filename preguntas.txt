@@ -1,0 +1,176 @@
+# ================================================================
+# ARCHIVO DE PREGUNTAS – Evaluación Metodología de Investigación
+# ================================================================
+# FORMATO:
+#   PREGUNTA: texto de la pregunta
+#   A: opción A
+#   B: opción B
+#   C: opción C
+#   D: opción D
+#   CORRECTA: letra de la opción correcta (A, B, C o D)
+#
+# Separa cada pregunta con UNA línea en blanco.
+# Las líneas que empiezan con # son comentarios y se ignoran.
+# Puedes tener cualquier cantidad de preguntas.
+# ================================================================
+
+PREGUNTA: ¿Cuál es la función más precisa de la referenciación en un proceso de investigación?
+A: Sustentar, validar y permitir la trazabilidad de la información utilizada
+B: Sustentar y organizar la información para mejorar la claridad del documento
+C: Validar y estructurar la información para facilitar su comprensión
+D: Organizar y respaldar la información para fortalecer la redacción
+CORRECTA: A
+
+PREGUNTA: ¿Cuál es la consecuencia más crítica de una referenciación inadecuada?
+A: Comprometer la integridad académica al no reconocer fuentes originales
+B: Reducir la claridad conceptual del documento académico
+C: Afectar la coherencia interna del documento
+D: Limitar la profundidad del análisis presentado
+CORRECTA: A
+
+PREGUNTA: ¿Qué caracteriza de forma más completa a una referencia académica adecuada?
+A: Permitir la identificación, localización y verificación de la fuente original
+B: Permitir la identificación y comprensión general de la fuente citada
+C: Permitir la localización aproximada del documento citado
+D: Permitir la comprensión del contenido referenciado
+CORRECTA: A
+
+PREGUNTA: ¿Qué se fortalece directamente al utilizar fuentes correctamente referenciadas?
+A: El rigor académico y la credibilidad del trabajo investigativo
+B: La estructura formal y coherencia del documento
+C: La extensión y profundidad del contenido
+D: La organización y secuencia del documento
+CORRECTA: A
+
+PREGUNTA: ¿Cuál es el criterio más determinante al seleccionar referencias en investigación?
+A: Pertinencia, confiabilidad y relación directa con el problema de estudio
+B: Actualidad, extensión y número de citas del documento
+C: Autoridad del autor y reconocimiento académico general
+D: Disponibilidad del documento y facilidad de acceso
+CORRECTA: A
+
+PREGUNTA: ¿Qué define con mayor precisión el contexto dentro del planteamiento del problema?
+A: La situación actual del fenómeno y su relevancia en un entorno específico
+B: La descripción general del problema en términos amplios
+C: La explicación de los antecedentes históricos del problema
+D: La identificación de posibles soluciones existentes
+CORRECTA: A
+
+PREGUNTA: ¿Cuál es la función principal del estado ideal en el planteamiento del problema?
+A: Establecer la condición deseada en ausencia del problema identificado
+B: Proponer una solución viable al problema identificado
+C: Comparar resultados de investigaciones previas
+D: Definir el alcance metodológico del estudio
+CORRECTA: A
+
+PREGUNTA: ¿Cómo se define con mayor exactitud la brecha de investigación?
+A: La diferencia conceptual y práctica entre la situación actual y la deseada
+B: La ausencia de información suficiente sobre el tema
+C: La falta de estudios recientes en el área
+D: La limitación metodológica de investigaciones previas
+CORRECTA: A
+
+PREGUNTA: ¿Qué describe con mayor precisión la propuesta de valor?
+A: El aporte específico que responde a la brecha identificada en el problema
+B: El conjunto de soluciones posibles al problema planteado
+C: El marco conceptual que sustenta la investigación
+D: El enfoque metodológico propuesto para el estudio
+CORRECTA: A
+
+PREGUNTA: ¿Qué relación existe entre la brecha y la propuesta de valor?
+A: La propuesta de valor busca responder directamente a la brecha identificada
+B: La brecha valida la pertinencia de la propuesta metodológica
+C: La propuesta de valor describe el estado ideal del problema
+D: La brecha define los objetivos específicos de la investigación
+CORRECTA: A
+
+PREGUNTA: ¿Cuál es la secuencia más coherente en el planteamiento del problema?
+A: Contexto → estado ideal → brecha → propuesta de valor
+B: Contexto → brecha → estado ideal → propuesta de valor
+C: Estado ideal → contexto → brecha → propuesta de valor
+D: Brecha → contexto → propuesta de valor → estado ideal
+CORRECTA: A
+
+PREGUNTA: ¿Qué característica define mejor una pregunta de investigación adecuada?
+A: Formularse de manera abierta permitiendo análisis y construcción de conocimiento
+B: Formularse de manera clara permitiendo una respuesta concreta
+C: Formularse de manera breve facilitando su comprensión inmediata
+D: Formularse de manera directa orientada a resultados específicos
+CORRECTA: A
+
+PREGUNTA: ¿Cuál de los siguientes verbos resulta menos apropiado en una pregunta de investigación?
+A: Determinar
+B: Analizar
+C: Explorar
+D: Caracterizar
+CORRECTA: A
+
+PREGUNTA: ¿Por qué el uso de verbos como "determinar" puede ser problemático?
+A: Porque orienta la pregunta hacia respuestas concluyentes o cerradas
+B: Porque dificulta la formulación del objetivo general
+C: Porque limita la claridad de la pregunta
+D: Porque restringe el uso de referencias
+CORRECTA: A
+
+PREGUNTA: ¿Cuál es la relación más adecuada entre la pregunta y el problema de investigación?
+A: La pregunta debe derivarse directamente del problema planteado
+B: La pregunta debe complementar el problema sin depender de él
+C: La pregunta debe enfocarse en la metodología del estudio
+D: La pregunta debe resumir el estado del arte
+CORRECTA: A
+
+PREGUNTA: ¿Cómo debe relacionarse la pregunta con la propuesta de solución?
+A: Debe orientar el análisis hacia la solución planteada sin anticiparla explícitamente
+B: Debe incluir explícitamente la solución dentro de su formulación
+C: Debe centrarse únicamente en el problema sin considerar soluciones
+D: Debe describir el resultado esperado de la investigación
+CORRECTA: A
+
+PREGUNTA: ¿Qué relación debe existir entre el objetivo general y la pregunta de investigación?
+A: El objetivo general debe responder de forma directa a la pregunta planteada
+B: El objetivo general debe complementar la pregunta sin responderla
+C: El objetivo general debe ampliar el alcance de la pregunta
+D: El objetivo general debe reformular la pregunta
+CORRECTA: A
+
+PREGUNTA: ¿Cuál es la cantidad más adecuada de objetivos específicos en una investigación?
+A: Tres objetivos específicos claramente definidos y articulados
+B: Tres objetivos específicos amplios y generales
+C: Dos objetivos específicos detallados
+D: Cuatro objetivos específicos independientes
+CORRECTA: A
+
+PREGUNTA: ¿Qué función cumplen los objetivos específicos dentro de la investigación?
+A: Descomponer el objetivo general en acciones concretas y alcanzables
+B: Reforzar el marco teórico del estudio
+C: Definir la metodología de investigación
+D: Explicar los resultados esperados
+CORRECTA: A
+
+PREGUNTA: ¿Qué característica distingue un objetivo bien formulado?
+A: Precisión, claridad y posibilidad de ser evaluado
+B: Amplitud, detalle y complejidad conceptual
+C: Flexibilidad, generalidad y adaptabilidad
+D: Extensión, profundidad y nivel técnico
+CORRECTA: A
+
+PREGUNTA: ¿Cuál de los siguientes verbos es más adecuado en la formulación de objetivos?
+A: Analizar
+B: Comprender
+C: Saber
+D: Entender
+CORRECTA: A
+
+PREGUNTA: ¿Cuál de los siguientes verbos es menos recomendable en objetivos de investigación?
+A: Entender
+B: Evaluar
+C: Identificar
+D: Comparar
+CORRECTA: A
+
+PREGUNTA: ¿Qué garantiza la coherencia entre pregunta y objetivos?
+A: La correspondencia directa en el problema abordado y la dirección de solución
+B: La similitud en la redacción de ambos elementos
+C: La coincidencia en el número de palabras utilizadas
+D: La ubicación en la misma sección del documento
+CORRECTA: A

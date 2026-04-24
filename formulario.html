@@ -286,7 +286,11 @@
         <input id="fEmail" type="email" placeholder="Ej: estudiante@unicomfacauca.edu.co" autocomplete="email">
       </div>
 
-      <button class="btn btn-primary" onclick="startQuiz()">Comenzar evaluación &rarr;</button>
+      <div id="loadStatus" style="text-align:center; font-size:13px; margin-bottom:12px; color:var(--muted);">
+        Cargando preguntas…
+      </div>
+
+      <button class="btn btn-primary" id="btnStart" onclick="startQuiz()" disabled>Comenzar evaluación &rarr;</button>
     </div>
 
     <!-- ── PANTALLA 2: Preguntas ── -->
@@ -311,13 +315,27 @@
 
       <div class="score-box" id="scoreBox">
         <div class="score-big"  id="scoreBig">–</div>
-        <div class="score-denom">de 23 respuestas correctas</div>
+        <div class="score-denom" id="scoreDenom">de – respuestas correctas</div>
         <div class="score-pct"  id="scorePct">–</div>
         <div class="score-status" id="scoreStatus">–</div>
       </div>
 
       <div class="alert ok"  id="alertOk"></div>
       <div class="alert err" id="alertErr"></div>
+
+      <div id="fallbackBox" style="display:none; margin-bottom:16px; padding:18px; background:#fff8e1; border:1px solid #ffd54f; border-radius:12px;">
+        <p style="font-size:14px; font-weight:700; color:#e65100; margin-bottom:6px;">⚠ No se pudo enviar el correo automáticamente.</p>
+        <p style="font-size:13px; color:#374151; margin-bottom:12px;">Muestra este código al docente o toma una captura de pantalla. El docente puede pegarlo en la página para ver tus resultados.</p>
+        <div style="position:relative;">
+          <textarea id="fallbackCode" readonly rows="3"
+            style="width:100%; font-family:monospace; font-size:12px; padding:10px; border:1px solid #e0e0e0; border-radius:8px; resize:none; background:#fff; color:#333;"></textarea>
+          <button onclick="copyFallback()"
+            style="margin-top:8px; padding:8px 18px; background:#f57c00; color:white; border:none; border-radius:6px; font-size:13px; font-weight:600; cursor:pointer;">
+            Copiar código
+          </button>
+          <span id="copyConfirm" style="display:none; margin-left:10px; font-size:13px; color:#2e7d32; font-weight:600;">✓ Copiado</span>
+        </div>
+      </div>
 
       <div class="stats-row">
         <div class="stat-card ok">
@@ -347,252 +365,97 @@ const CFG = {
 emailjs.init(CFG.publicKey);
 
 /* ================================================================
-   PREGUNTAS  (todas las 23 del documento)
+   PREGUNTAS  (se cargan desde preguntas.txt)
 ================================================================ */
 const LETTERS = ['A','B','C','D'];
 
-const questions = [
-  {
-    text: '¿Cuál es la función más precisa de la referenciación en un proceso de investigación?',
-    options: [
-      'Sustentar, validar y permitir la trazabilidad de la información utilizada',
-      'Sustentar y organizar la información para mejorar la claridad del documento',
-      'Validar y estructurar la información para facilitar su comprensión',
-      'Organizar y respaldar la información para fortalecer la redacción',
-    ],
-    correct: 0,
-  },
-  {
-    text: '¿Cuál es la consecuencia más crítica de una referenciación inadecuada?',
-    options: [
-      'Comprometer la integridad académica al no reconocer fuentes originales',
-      'Reducir la claridad conceptual del documento académico',
-      'Afectar la coherencia interna del documento',
-      'Limitar la profundidad del análisis presentado',
-    ],
-    correct: 0,
-  },
-  {
-    text: '¿Qué caracteriza de forma más completa a una referencia académica adecuada?',
-    options: [
-      'Permitir la identificación, localización y verificación de la fuente original',
-      'Permitir la identificación y comprensión general de la fuente citada',
-      'Permitir la localización aproximada del documento citado',
-      'Permitir la comprensión del contenido referenciado',
-    ],
-    correct: 0,
-  },
-  {
-    text: '¿Qué se fortalece directamente al utilizar fuentes correctamente referenciadas?',
-    options: [
-      'El rigor académico y la credibilidad del trabajo investigativo',
-      'La estructura formal y coherencia del documento',
-      'La extensión y profundidad del contenido',
-      'La organización y secuencia del documento',
-    ],
-    correct: 0,
-  },
-  {
-    text: '¿Cuál es el criterio más determinante al seleccionar referencias en investigación?',
-    options: [
-      'Pertinencia, confiabilidad y relación directa con el problema de estudio',
-      'Actualidad, extensión y número de citas del documento',
-      'Autoridad del autor y reconocimiento académico general',
-      'Disponibilidad del documento y facilidad de acceso',
-    ],
-    correct: 0,
-  },
-  {
-    text: '¿Qué define con mayor precisión el contexto dentro del planteamiento del problema?',
-    options: [
-      'La situación actual del fenómeno y su relevancia en un entorno específico',
-      'La descripción general del problema en términos amplios',
-      'La explicación de los antecedentes históricos del problema',
-      'La identificación de posibles soluciones existentes',
-    ],
-    correct: 0,
-  },
-  {
-    text: '¿Cuál es la función principal del estado ideal en el planteamiento del problema?',
-    options: [
-      'Establecer la condición deseada en ausencia del problema identificado',
-      'Proponer una solución viable al problema identificado',
-      'Comparar resultados de investigaciones previas',
-      'Definir el alcance metodológico del estudio',
-    ],
-    correct: 0,
-  },
-  {
-    text: '¿Cómo se define con mayor exactitud la brecha de investigación?',
-    options: [
-      'La diferencia conceptual y práctica entre la situación actual y la deseada',
-      'La ausencia de información suficiente sobre el tema',
-      'La falta de estudios recientes en el área',
-      'La limitación metodológica de investigaciones previas',
-    ],
-    correct: 0,
-  },
-  {
-    text: '¿Qué describe con mayor precisión la propuesta de valor?',
-    options: [
-      'El aporte específico que responde a la brecha identificada en el problema',
-      'El conjunto de soluciones posibles al problema planteado',
-      'El marco conceptual que sustenta la investigación',
-      'El enfoque metodológico propuesto para el estudio',
-    ],
-    correct: 0,
-  },
-  {
-    text: '¿Qué relación existe entre la brecha y la propuesta de valor?',
-    options: [
-      'La propuesta de valor busca responder directamente a la brecha identificada',
-      'La brecha valida la pertinencia de la propuesta metodológica',
-      'La propuesta de valor describe el estado ideal del problema',
-      'La brecha define los objetivos específicos de la investigación',
-    ],
-    correct: 0,
-  },
-  {
-    text: '¿Cuál es la secuencia más coherente en el planteamiento del problema?',
-    options: [
-      'Contexto → estado ideal → brecha → propuesta de valor',
-      'Contexto → brecha → estado ideal → propuesta de valor',
-      'Estado ideal → contexto → brecha → propuesta de valor',
-      'Brecha → contexto → propuesta de valor → estado ideal',
-    ],
-    correct: 0,
-  },
-  {
-    text: '¿Qué característica define mejor una pregunta de investigación adecuada?',
-    options: [
-      'Formularse de manera abierta permitiendo análisis y construcción de conocimiento',
-      'Formularse de manera clara permitiendo una respuesta concreta',
-      'Formularse de manera breve facilitando su comprensión inmediata',
-      'Formularse de manera directa orientada a resultados específicos',
-    ],
-    correct: 0,
-  },
-  {
-    text: '¿Cuál de los siguientes verbos resulta menos apropiado en una pregunta de investigación?',
-    options: [
-      'Determinar',
-      'Analizar',
-      'Explorar',
-      'Caracterizar',
-    ],
-    correct: 0,
-  },
-  {
-    text: '¿Por qué el uso de verbos como "determinar" puede ser problemático?',
-    options: [
-      'Porque orienta la pregunta hacia respuestas concluyentes o cerradas',
-      'Porque dificulta la formulación del objetivo general',
-      'Porque limita la claridad de la pregunta',
-      'Porque restringe el uso de referencias',
-    ],
-    correct: 0,
-  },
-  {
-    text: '¿Cuál es la relación más adecuada entre la pregunta y el problema de investigación?',
-    options: [
-      'La pregunta debe derivarse directamente del problema planteado',
-      'La pregunta debe complementar el problema sin depender de él',
-      'La pregunta debe enfocarse en la metodología del estudio',
-      'La pregunta debe resumir el estado del arte',
-    ],
-    correct: 0,
-  },
-  {
-    text: '¿Cómo debe relacionarse la pregunta con la propuesta de solución?',
-    options: [
-      'Debe orientar el análisis hacia la solución planteada sin anticiparla explícitamente',
-      'Debe incluir explícitamente la solución dentro de su formulación',
-      'Debe centrarse únicamente en el problema sin considerar soluciones',
-      'Debe describir el resultado esperado de la investigación',
-    ],
-    correct: 0,
-  },
-  {
-    text: '¿Qué relación debe existir entre el objetivo general y la pregunta de investigación?',
-    options: [
-      'El objetivo general debe responder de forma directa a la pregunta planteada',
-      'El objetivo general debe complementar la pregunta sin responderla',
-      'El objetivo general debe ampliar el alcance de la pregunta',
-      'El objetivo general debe reformular la pregunta',
-    ],
-    correct: 0,
-  },
-  {
-    text: '¿Cuál es la cantidad más adecuada de objetivos específicos en una investigación?',
-    options: [
-      'Tres objetivos específicos claramente definidos y articulados',
-      'Tres objetivos específicos amplios y generales',
-      'Dos objetivos específicos detallados',
-      'Cuatro objetivos específicos independientes',
-    ],
-    correct: 0,
-  },
-  {
-    text: '¿Qué función cumplen los objetivos específicos dentro de la investigación?',
-    options: [
-      'Descomponer el objetivo general en acciones concretas y alcanzables',
-      'Reforzar el marco teórico del estudio',
-      'Definir la metodología de investigación',
-      'Explicar los resultados esperados',
-    ],
-    correct: 0,
-  },
-  {
-    text: '¿Qué característica distingue un objetivo bien formulado?',
-    options: [
-      'Precisión, claridad y posibilidad de ser evaluado',
-      'Amplitud, detalle y complejidad conceptual',
-      'Flexibilidad, generalidad y adaptabilidad',
-      'Extensión, profundidad y nivel técnico',
-    ],
-    correct: 0,
-  },
-  {
-    text: '¿Cuál de los siguientes verbos es más adecuado en la formulación de objetivos?',
-    options: [
-      'Analizar',
-      'Comprender',
-      'Saber',
-      'Entender',
-    ],
-    correct: 0,
-  },
-  {
-    text: '¿Cuál de los siguientes verbos es menos recomendable en objetivos de investigación?',
-    options: [
-      'Entender',
-      'Evaluar',
-      'Identificar',
-      'Comparar',
-    ],
-    correct: 0,
-  },
-  {
-    text: '¿Qué garantiza la coherencia entre pregunta y objetivos?',
-    options: [
-      'La correspondencia directa en el problema abordado y la dirección de solución',
-      'La similitud en la redacción de ambos elementos',
-      'La coincidencia en el número de palabras utilizadas',
-      'La ubicación en la misma sección del documento',
-    ],
-    correct: 0,
-  },
-];
+let questions = [];
 
 /* ================================================================
    ESTADO
 ================================================================ */
 let studentName  = '';
 let studentEmail = '';
-let answers      = new Array(questions.length).fill(null);
-let violations   = [];   // { type, time }
+let answers      = [];
+let violations   = [];
 let quizActive   = false;
-let violPending  = false; // debounce: evita doble modal
+let violPending  = false;
+
+/* ================================================================
+   CARGA Y PARSEO DE PREGUNTAS DESDE preguntas.txt
+================================================================ */
+function shuffleArray(arr) {
+  const a = [...arr];
+  for (let i = a.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [a[i], a[j]] = [a[j], a[i]];
+  }
+  return a;
+}
+
+function shuffleOptions(q) {
+  const indexed = q.options.map((text, i) => ({ text, isCorrect: i === q.correct }));
+  const shuffled = shuffleArray(indexed);
+  return {
+    text:    q.text,
+    options: shuffled.map(o => o.text),
+    correct: shuffled.findIndex(o => o.isCorrect),
+  };
+}
+
+function parseQuestions(raw) {
+  const parsed = [];
+  const blocks = raw.split(/\n\s*\n/);
+  for (const block of blocks) {
+    const lines = block.split('\n')
+      .map(l => l.trim())
+      .filter(l => l && !l.startsWith('#'));
+    if (!lines.length) continue;
+
+    let text = '';
+    const optMap = {};
+    let correctLetter = '';
+
+    for (const line of lines) {
+      if (/^PREGUNTA:/i.test(line))       text          = line.replace(/^PREGUNTA:\s*/i, '');
+      else if (/^([A-D]):\s/i.test(line)) optMap[line[0].toUpperCase()] = line.slice(3).trim();
+      else if (/^CORRECTA:/i.test(line))  correctLetter = line.replace(/^CORRECTA:\s*/i, '').trim().toUpperCase();
+    }
+
+    const letters = ['A','B','C','D'];
+    const options = letters.map(l => optMap[l]).filter(Boolean);
+    const correct = letters.indexOf(correctLetter);
+
+    if (text && options.length >= 2 && correct >= 0) {
+      parsed.push({ text, options, correct });
+    }
+  }
+  return parsed;
+}
+
+async function loadQuestions() {
+  const statusEl = document.getElementById('loadStatus');
+  const btnEl    = document.getElementById('btnStart');
+  try {
+    const res  = await fetch('./preguntas.txt');
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    const raw  = await res.text();
+    const base = parseQuestions(raw);
+    if (!base.length) throw new Error('No se encontraron preguntas válidas.');
+
+    // Aleatorizar orden de preguntas y opciones de cada una
+    questions = shuffleArray(base).map(shuffleOptions);
+    answers   = new Array(questions.length).fill(null);
+
+    statusEl.textContent  = `${questions.length} preguntas cargadas`;
+    statusEl.style.color  = 'var(--ok)';
+    btnEl.disabled        = false;
+  } catch (err) {
+    console.error('Error cargando preguntas:', err);
+    statusEl.textContent = '✗ Error al cargar las preguntas. Recarga la página.';
+    statusEl.style.color = 'var(--fail)';
+  }
+}
 
 /* ================================================================
    PANTALLA 1 – INFO
@@ -718,6 +581,7 @@ function showResults() {
   const box = document.getElementById('scoreBox');
   box.className = `score-box ${pass ? 'pass' : 'fail'}`;
   document.getElementById('scoreBig').textContent    = score;
+  document.getElementById('scoreDenom').textContent  = `de ${total} respuestas correctas`;
   document.getElementById('scorePct').textContent    = `${pct}%`;
   document.getElementById('scoreStatus').textContent = pass ? '✓ APROBADO' : '✗ REPROBADO';
 
@@ -818,34 +682,79 @@ function buildEmailBody(name, email, score, pct, ans) {
 }
 
 /* ================================================================
-   ENVÍO DE CORREO
+   ENVÍO DE CORREO  (con reintentos automáticos)
 ================================================================ */
 function sendEmail(name, email, score, pct, ans) {
   document.getElementById('overlay').classList.add('show');
 
   const subject = `[Evaluación MetInv] ${name} – ${score}/${questions.length} (${pct}%)`;
   const message = buildEmailBody(name, email, score, pct, ans);
+  const params  = { subject, message, reply_to: email, student_name: name, student_email: email };
 
-  emailjs.send(CFG.serviceId, CFG.templateId, {
-    subject,
-    message,
-    reply_to:      email,
-    student_name:  name,
-    student_email: email,
-  })
-  .then(() => {
-    document.getElementById('overlay').classList.remove('show');
-    const el = document.getElementById('alertOk');
-    el.style.display = 'block';
-    el.textContent   = '✓ Tus resultados han sido enviados exitosamente al docente.';
-  })
-  .catch(err => {
-    console.error('EmailJS error:', err);
-    document.getElementById('overlay').classList.remove('show');
-    const el = document.getElementById('alertErr');
-    el.style.display = 'block';
-    el.textContent   = '✗ No fue posible enviar el correo automáticamente. Por favor muestra esta pantalla al docente o toma una captura de pantalla.';
-  });
+  // Retraso aleatorio 0-8 s para evitar ráfagas simultáneas
+  const delay = Math.floor(Math.random() * 8000);
+
+  setTimeout(() => attemptSend(params, 1), delay);
+}
+
+function attemptSend(params, attempt) {
+  const MAX_ATTEMPTS = 4;
+  const RETRY_DELAY  = 6000; // 6 s entre reintentos
+
+  emailjs.send(CFG.serviceId, CFG.templateId, params)
+    .then(() => {
+      document.getElementById('overlay').classList.remove('show');
+      const el = document.getElementById('alertOk');
+      el.style.display = 'block';
+      el.textContent   = '✓ Tus resultados han sido enviados exitosamente al docente.';
+    })
+    .catch(err => {
+      console.warn(`EmailJS intento ${attempt} fallido:`, err);
+      if (attempt < MAX_ATTEMPTS) {
+        // Actualizar mensaje del overlay durante reintento
+        const p = document.querySelector('#overlay p:first-of-type');
+        if (p) p.textContent = `Reintentando envío (${attempt}/${MAX_ATTEMPTS - 1})…`;
+        setTimeout(() => attemptSend(params, attempt + 1), RETRY_DELAY);
+      } else {
+        document.getElementById('overlay').classList.remove('show');
+        showEmailFallback();
+      }
+    });
+}
+
+/* ================================================================
+   FALLBACK CUANDO FALLA EL CORREO
+================================================================ */
+function showEmailFallback() {
+  const total  = questions.length;
+  const score  = answers.reduce((acc, a, i) => acc + (a === questions[i].correct ? 1 : 0), 0);
+  const pct    = ((score / total) * 100).toFixed(1);
+  const now    = new Date().toLocaleString('es-CO', { timeZone: 'America/Bogota' });
+
+  const payload = {
+    n: studentName,
+    e: studentEmail,
+    s: score,
+    t: total,
+    p: pct,
+    d: now,
+    a: answers,
+    v: violations.length,
+  };
+
+  const code = btoa(unescape(encodeURIComponent(JSON.stringify(payload))));
+  document.getElementById('fallbackCode').value = code;
+  document.getElementById('fallbackBox').style.display = 'block';
+}
+
+function copyFallback() {
+  const ta = document.getElementById('fallbackCode');
+  ta.select();
+  ta.setSelectionRange(0, 99999);
+  navigator.clipboard.writeText(ta.value).catch(() => document.execCommand('copy'));
+  const confirm = document.getElementById('copyConfirm');
+  confirm.style.display = 'inline';
+  setTimeout(() => confirm.style.display = 'none', 2500);
 }
 
 /* ================================================================
@@ -910,6 +819,9 @@ function showScreen(id) {
   document.getElementById(id).classList.add('active');
   window.scrollTo({ top: 0, behavior: 'smooth' });
 }
+
+// Iniciar carga de preguntas al abrir la página
+loadQuestions();
 </script>
 </body>
 </html>
