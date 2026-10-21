@@ -1,0 +1,225 @@
+# ================================================================
+# ARCHIVO DE PREGUNTAS - Metodología de Investigación - Curso 2
+# ================================================================
+# FORMATO:
+#   PREGUNTA: texto de la pregunta
+#   A: opción A
+#   B: opción B
+#   C: opción C
+#   D: opción D
+#   CORRECTA: letra de la opción correcta (A, B, C o D)
+#
+# Separa cada pregunta con UNA línea en blanco.
+# Las líneas que empiezan con # son comentarios y se ignoran.
+# Los casos y sus cifras son hipotéticos.
+# ================================================================
+
+PREGUNTA: Un equipo estudia un sistema municipal que recibe reportes de daños en alumbrado y los asigna a cuadrillas. Para el pilar de contexto y relevancia dispone de dos datos: se descargó la aplicación 12 000 veces y 180 reportes quedaron sin asignar durante septiembre, según el registro operativo. El borrador usa las descargas para afirmar que la asignación funciona bien. ¿Qué revisión construye un argumento pertinente sin exceder la evidencia?
+A: Conservar las descargas como medida de asignación y presentar los 180 reportes como evidencia de que la ciudadanía utiliza poco el sistema.
+B: Sustituir las descargas por los 180 reportes y atribuir la falta de asignación a la insuficiencia de cuadrillas durante septiembre.
+C: Describir la función de asignación, documentar los 180 reportes pendientes y precisar sus consecuencias, sin equiparar descargas con desempeño operativo.
+D: Relacionar los 180 reportes con las 12 000 descargas y presentar ese cociente como la proporción de solicitudes que el sistema no logró asignar.
+CORRECTA: C
+
+PREGUNTA: El protocolo de un archivo digital exige recuperar cada expediente solicitado en un máximo de tres minutos. Una prueba registra un promedio de dos minutos, pero algunas búsquedas tardan siete. ¿Qué decisión permite juzgar el sistema frente al estado ideal realmente establecido?
+A: Examinar los tiempos por solicitud y su cumplimiento del máximo, pues el promedio no demuestra que cada recuperación satisfaga el protocolo.
+B: Declarar cumplido el estado ideal porque el promedio de dos minutos es inferior al límite de tres minutos fijado para las recuperaciones.
+C: Reemplazar el máximo por el promedio de tres minutos para conservar el referente y aprovechar el indicador ya calculado en la prueba.
+D: Declarar incumplimiento general de todas las recuperaciones porque el mayor tiempo observado supera el máximo permitido por el protocolo.
+CORRECTA: A
+
+PREGUNTA: Se revisan estudios que atribuyen a una capacitación una disminución de errores de digitación. Todos midieron errores después de capacitar, pero ninguno contó con medición previa ni grupo de comparación. Un nuevo estudio pretende determinar si la capacitación modifica esos errores. ¿Qué fragmento expresa mejor la brecha que justifica el estudio?
+A: Se desconoce si las personas capacitadas presentan errores de digitación, porque los estudios disponibles utilizaron mediciones posteriores a la capacitación.
+B: Se desconoce cómo implementar la capacitación en una empresa nueva, porque los estudios disponibles ya establecieron su efecto sobre los errores.
+C: Se desconoce qué capacitación produce menos errores, porque los estudios disponibles permiten atribuir los resultados a cada alternativa por separado.
+D: Se desconoce en qué medida los errores observados cambian por la capacitación, porque los diseños disponibles no permiten contrastar ese cambio con una referencia adecuada.
+CORRECTA: D
+
+PREGUNTA: Una investigación comparará métodos de compresión de imágenes para un archivo patrimonial. La incertidumbre es cómo cambia la legibilidad de textos pequeños al reducir el tamaño de los archivos. ¿Qué propuesta de valor conserva el aporte de conocimiento aunque ningún método resulte superior en todos los casos?
+A: Entregar un compresor que use el método con menor tamaño promedio y considerar esa selección suficiente para establecer su utilidad patrimonial.
+B: Establecer la relación entre reducción de tamaño y legibilidad por método, y derivar criterios de selección según las características de los documentos.
+C: Entregar un compresor con varios métodos y utilizar el número de alternativas implementadas como evidencia del conocimiento nuevo producido.
+D: Establecer qué método prefieren los administradores y usar esa preferencia como sustituto de la evaluación de legibilidad de los documentos.
+CORRECTA: B
+
+PREGUNTA: Un párrafo dice: «El sistema de reservas atiende cinco canchas. El reglamento exige confirmar cada reserva antes del pago. Se evaluará una validación adicional. No se conoce cuánto contribuyen las confirmaciones tardías a los pagos duplicados». ¿Qué revisión mejora la progresión entre los cuatro pilares sin añadir hechos?
+A: Presentar la validación adicional después de describir las canchas y usar la incertidumbre como cierre del estado ideal.
+B: Presentar los pagos duplicados como prueba de que la validación adicional resolverá la diferencia con el reglamento.
+C: Presentar primero la incertidumbre y describir luego las canchas como justificación de la tecnología elegida para la validación.
+D: Describir el sistema, establecer el comportamiento exigido, precisar la incertidumbre y después anunciar la evaluación de la validación adicional.
+CORRECTA: D
+
+PREGUNTA: Un borrador del contexto afirma que el uso de una plataforma comunitaria disminuye cada mes. La única evidencia disponible es una encuesta aplicada una vez a los usuarios actuales sobre su frecuencia de uso durante esa semana. ¿Qué ajuste permite sostener el argumento con esa evidencia?
+A: Describir la frecuencia reportada en esa semana y dejar pendiente la tendencia mensual hasta obtener mediciones comparables de distintos meses.
+B: Conservar la disminución mensual y tomar a quienes reportan poco uso como prueba de que antes utilizaban más la plataforma.
+C: Conservar la disminución mensual y usar el número total de encuestados como indicador de la duración de la tendencia.
+D: Describir la frecuencia semanal como una medición de cambio y extender ese patrón a los meses del periodo académico.
+CORRECTA: A
+
+PREGUNTA: Un árbol explica que las solicitudes de compra se rechazan porque contienen códigos vencidos, y que esos códigos siguen utilizándose porque el catálogo se actualiza una vez al año. Se propone investigar una actualización trimestral. ¿Qué pregunta examina el mecanismo planteado sin sustituirlo por un efecto lejano?
+A: ¿Qué relación existe entre la actualización trimestral y la satisfacción general de los proveedores durante el año de estudio?
+B: ¿Qué diferencias existen en el uso de códigos vencidos y en los rechazos por ese motivo entre actualización anual y trimestral durante el periodo estudiado?
+C: ¿Qué diferencias existen en el valor total de las compras entre actualización anual y trimestral durante el periodo estudiado?
+D: ¿Qué relación existe entre la actualización trimestral y la percepción de modernización de la empresa durante el año de estudio?
+CORRECTA: B
+
+PREGUNTA: En un centro de cómputo, las fallas de ventilación han ocasionado cuatro interrupciones este mes. La tendencia registrada indica que las interrupciones podrían aumentar si continúa el deterioro. El equipo propone estudiar la relación entre temperatura y fallas antes de elegir una intervención. ¿Qué versión separa correctamente evidencia, pronóstico y aporte del estudio?
+A: Las interrupciones aumentarán con certeza; el estudio demostrará que mejorar la ventilación elimina las fallas registradas.
+B: La relación entre temperatura y fallas ya está demostrada; el estudio permitirá contar las interrupciones que ocurrirán el próximo mes.
+C: Las cuatro interrupciones son un efecto observado; su posible aumento es un pronóstico; examinar la relación entre temperatura y fallas orientará una intervención.
+D: Las cuatro interrupciones son un pronóstico; su posible aumento es una causa; examinar la relación entre temperatura y fallas confirmará el efecto observado.
+CORRECTA: C
+
+PREGUNTA: Para analizar errores en un proceso de selección de becarios, un equipo recibe permiso para usar registros anonimizados de decisiones, pero no para consultar expedientes personales. Su pregunta inicial requiere detalles familiares identificables. ¿Qué decisión permite conservar un estudio viable y respetar el acceso autorizado?
+A: Reformular la pregunta hacia patrones de error observables en los registros autorizados y comprobar que esa incertidumbre tenga relevancia propia.
+B: Mantener la pregunta y obtener los detalles de los expedientes, eliminando los nombres únicamente cuando se publique el informe final.
+C: Mantener la pregunta y reconstruir los detalles familiares a partir de comentarios informales, tratándolos como sustitutos de los expedientes.
+D: Reformular la pregunta hacia los registros anonimizados, pero concluir sobre los motivos familiares que originaron cada decisión individual.
+CORRECTA: A
+
+PREGUNTA: Una oficina compara dos formas de revisión documental para conocer la proporción de expedientes devueltos por errores. Con el método A se revisaron 400 expedientes y se devolvieron 40; con B se revisaron 100 y se devolvieron 20. ¿Qué conclusión responde al indicador planteado sin atribuir una causalidad que el caso no establece?
+A: B presenta mejor desempeño porque registra veinte devoluciones menos, independientemente del número de expedientes revisados.
+B: Ambos métodos presentan el mismo desempeño porque las diferencias en volumen impiden calcular proporciones comparables.
+C: A produjo una reducción causal de diez puntos porcentuales en las devoluciones, como demuestra la diferencia entre las proporciones.
+D: A presenta una proporción observada de devoluciones menor, del 10 % frente al 20 %, aunque esa comparación por sí sola no demuestra un efecto causal.
+CORRECTA: D
+
+PREGUNTA: En una red de huertas comunitarias, algunas personas aceptan recomendaciones de una aplicación y otras prefieren el conocimiento de vecinos. El equipo quiere comprender cómo construyen confianza en ambas fuentes, no establecer cuál logra mayor producción. ¿Qué pregunta se ajusta mejor a ese propósito?
+A: ¿Qué diferencia existe en la cantidad cosechada por quienes siguen la aplicación y quienes consultan a sus vecinos durante la temporada?
+B: ¿Cómo interpretan los participantes la credibilidad de las recomendaciones digitales y vecinales al decidir sobre sus huertas durante la temporada?
+C: ¿Qué proporción de participantes consulta más veces la aplicación que a sus vecinos al decidir sobre sus huertas durante la temporada?
+D: ¿En qué medida la frecuencia de consulta de la aplicación determina la confianza de los participantes frente a la orientación vecinal durante la temporada?
+CORRECTA: B
+
+PREGUNTA: Una cooperativa quiere evaluar un nuevo algoritmo de reparto. La incertidumbre es si cambia la distancia recorrida sin aumentar los pedidos que llegan después del horario acordado. El método vigente será el referente. ¿Qué pregunta mantiene las dos dimensiones de evaluación?
+A: ¿Qué diferencias existen entre ambos métodos en distancia recorrida y número de pedidos asignados durante las jornadas de reparto de la cooperativa?
+B: ¿Qué diferencias existen entre ambos métodos en tiempo de cálculo y proporción de entregas tardías durante las jornadas de reparto de la cooperativa?
+C: ¿Qué diferencias existen entre ambos métodos en distancia recorrida y proporción de entregas tardías durante las jornadas de reparto de la cooperativa?
+D: ¿Qué diferencias existen entre ambos métodos en distancia recorrida y satisfacción de los conductores durante las jornadas de reparto de la cooperativa?
+CORRECTA: C
+
+PREGUNTA: Un proyecto pretende comparar traducción automática con revisión humana frente a traducción automática sin revisión, en textos técnicos de una editorial durante 2026-II. El resultado será la proporción de términos traducidos incorrectamente. La pregunta escrita compara revisión humana con traducción totalmente manual. ¿Qué corrección conserva la intervención, el resultado y el comparador previstos?
+A: Comparar traducción automática revisada con traducción manual revisada, manteniendo la proporción de términos incorrectos en los textos técnicos de 2026-II.
+B: Comparar traducción automática revisada con traducción automática sin revisión, manteniendo la proporción de términos incorrectos en los textos técnicos de 2026-II.
+C: Comparar traducción automática sin revisión con traducción manual sin revisión, manteniendo la proporción de términos incorrectos en los textos técnicos de 2026-II.
+D: Comparar traducción automática revisada con traducción automática sin revisión, sustituyendo los términos incorrectos por el tiempo de lectura de los textos de 2026-II.
+CORRECTA: B
+
+PREGUNTA: Un museo desconoce qué errores de navegación cometen los visitantes al usar sus pantallas y con qué frecuencia ocurre cada tipo. Todavía no pretende explicar las causas ni evaluar cambios. ¿Qué pregunta corresponde a esa incertidumbre inicial?
+A: ¿Qué características del diseño causan los errores de navegación de los visitantes en las pantallas del museo durante noviembre?
+B: ¿En qué medida una nueva organización de menús reduce los errores de navegación en las pantallas del museo durante noviembre?
+C: ¿Qué relación existe entre la edad de los visitantes y los errores de navegación en las pantallas del museo durante noviembre?
+D: ¿Qué tipos de errores de navegación presentan los visitantes y con qué frecuencia ocurre cada uno en las pantallas del museo durante noviembre?
+CORRECTA: D
+
+PREGUNTA: El objetivo general de un estudio es interpretar cómo los docentes negocian criterios de autoría cuando evalúan trabajos realizados con asistentes digitales. Se observarán reuniones y se realizarán entrevistas en un programa universitario durante un semestre. ¿Qué pregunta conserva ese objetivo?
+A: ¿Cómo construyen y negocian los docentes del programa los criterios de autoría de trabajos con asistentes digitales durante el semestre?
+B: ¿Qué proporción de docentes del programa acepta trabajos con asistentes digitales sin modificar sus criterios de autoría durante el semestre?
+C: ¿Qué efecto tienen los asistentes digitales sobre la precisión de las calificaciones asignadas por los docentes del programa durante el semestre?
+D: ¿Qué diferencias de rendimiento presentan los estudiantes del programa según los criterios de autoría utilizados durante el semestre?
+CORRECTA: A
+
+PREGUNTA: Se comparan tiempos de búsqueda de información entre empleados que eligieron voluntariamente dos herramientas. Los usuarios de una herramienta tienen mayor experiencia laboral. La pregunta original pide comparar los tiempos observados, no estimar efectos causales. ¿Qué conclusión conserva ese alcance?
+A: La herramienta con menor tiempo es la causa de la diferencia, porque la elección voluntaria reproduce las condiciones habituales del trabajo.
+B: La experiencia explica toda la diferencia entre herramientas, porque los grupos presentan una distribución desigual de esa característica.
+C: Se observan diferencias entre los grupos; atribuirlas a la herramienta exige abordar explicaciones alternativas, incluida la experiencia laboral.
+D: La desigualdad de experiencia impide describir los tiempos obtenidos, aunque ambos grupos hayan realizado las mismas tareas de búsqueda.
+CORRECTA: C
+
+PREGUNTA: Una universidad ha decidido crear un repositorio de trabajos. El problema investigable identificado es que se desconoce qué estrategia de búsqueda permite recuperar documentos pertinentes con menor esfuerzo. ¿Qué pregunta convierte el desarrollo en un medio para producir conocimiento sobre esa brecha?
+A: ¿Qué arquitectura permite publicar el repositorio con buscador y filtros dentro del presupuesto y plazo disponibles para la universidad?
+B: ¿Qué funciones del repositorio prefieren los administradores para organizar la publicación de los trabajos de la universidad?
+C: ¿Qué procedimientos permiten cargar todos los trabajos y comprobar que sus enlaces estén disponibles en el repositorio universitario?
+D: ¿Qué diferencias existen en pertinencia de los documentos recuperados y tiempo de búsqueda entre consulta por palabras y navegación por categorías en el repositorio universitario?
+CORRECTA: D
+
+PREGUNTA: Dos investigaciones sobre revisión de código reportan resultados opuestos: una encuentra menos defectos al revisar en parejas y otra no encuentra diferencias. Ninguna distingue tareas sencillas de tareas complejas. Un equipo sospecha que esa condición puede ayudar a interpretar la discrepancia. ¿Qué pregunta aborda esa incertidumbre?
+A: ¿Cómo varían las diferencias de defectos entre revisión individual y en parejas al comparar tareas sencillas y complejas en el equipo estudiado?
+B: ¿Qué promedio global de defectos se obtiene al reunir revisiones individuales y en parejas sin distinguir la complejidad de las tareas del equipo estudiado?
+C: ¿Por qué la revisión en parejas reduce los defectos de todas las tareas del equipo estudiado, pese a las diferencias entre los resultados anteriores?
+D: ¿Cuál de las dos investigaciones tiene mayor número de citas y debería adoptarse como explicación del desempeño del equipo estudiado?
+CORRECTA: A
+
+PREGUNTA: Un estudiante busca únicamente la expresión «tablero inteligente de mantenimiento» y no encuentra resultados. Concluye que no se ha investigado cómo priorizar reparaciones. ¿Qué acción es necesaria para sostener o revisar esa supuesta brecha?
+A: Conservar la conclusión y añadir el número de resultados nulos, pues la expresión resume la solución que se pretende construir.
+B: Ampliar la búsqueda con conceptos y términos equivalentes sobre priorización, documentar su alcance y contrastar qué preguntas resuelven los antecedentes recuperados.
+C: Conservar la conclusión si tampoco aparece el nombre de la empresa, pues la novedad institucional demuestra la ausencia de conocimiento sobre priorización.
+D: Sustituir la búsqueda por una encuesta sobre interés en el tablero, pues la demanda del producto establece lo que la literatura todavía no explica.
+CORRECTA: B
+
+PREGUNTA: Un equipo sostiene que usar reconocimiento de voz en actas constituye por sí mismo una contribución científica porque la organización nunca lo ha utilizado. ¿Qué reformulación establece una incertidumbre de conocimiento, en lugar de limitarse a la novedad de uso?
+A: Se desconoce qué proveedor instalará el reconocimiento de voz, por lo que se compararán precios para elegir una alternativa disponible.
+B: Se desconoce cuántos funcionarios desearían usar reconocimiento de voz, por lo que su aceptación demostrará la precisión de las actas.
+C: Se desconoce cómo afecta la superposición de voces a los errores de transcripción, por lo que se evaluará esa relación en reuniones de la organización.
+D: Se desconoce cuánto tardará la instalación del reconocimiento de voz, por lo que completar su despliegue demostrará el aporte al conocimiento.
+CORRECTA: C
+
+PREGUNTA: Se dispone de poca información sobre por qué los pequeños productores rechazan una herramienta de registro agrícola. El equipo quiere identificar primero barreras no previstas y después estimar su presencia en una población mayor. ¿Qué secuencia responde mejor a ese propósito?
+A: Explorar experiencias mediante entrevistas, construir categorías y usarlas para diseñar una encuesta cuyos resultados se interpreten junto con los hallazgos iniciales.
+B: Aplicar una encuesta con barreras elegidas de antemano y usar entrevistas posteriores únicamente para ilustrar las opciones ya incluidas.
+C: Realizar entrevistas, contar las menciones de cada barrera y usar esos conteos para estimar directamente su presencia en toda la población de productores.
+D: Realizar entrevistas y una encuesta sobre asuntos distintos, reuniendo sus resultados al final sin relacionar las categorías con las preguntas de la encuesta.
+CORRECTA: A
+
+PREGUNTA: Un experimento pretende estimar el efecto de ofrecer ejemplos interactivos sobre la detección de errores. El grupo con ejemplos recibe además el doble de tiempo y ejercicios más sencillos que el grupo de comparación. ¿Qué cambio permite aislar mejor la condición de interés?
+A: Mantener tiempo y dificultad distintos, pero aumentar el número de participantes para compensar las diferencias entre condiciones.
+B: Mantener tiempo y dificultad distintos, pero comparar porcentajes de aciertos para que ambos resultados queden en la misma escala.
+C: Mantener tiempo y dificultad distintos, pero preguntar a los participantes cuánto creen haber aprendido gracias a los ejemplos.
+D: Igualar tiempo y dificultad de las tareas entre grupos, manteniendo como diferencia planificada la disponibilidad de ejemplos interactivos.
+CORRECTA: D
+
+PREGUNTA: Una investigación observa reuniones de soporte y entrevista a sus integrantes para comprender cómo interpretan la urgencia de los incidentes. Los hallazgos se usarán para diseñar una guía de coordinación. ¿Qué justificación metodológica se ajusta al procedimiento y a la finalidad?
+A: Es cuantitativa y aplicada porque la guía final permitirá ordenar incidentes en categorías de prioridad.
+B: Es cualitativa y experimental porque observar reuniones permite modificar las interpretaciones de sus participantes.
+C: Es cualitativa y aplicada porque interpreta prácticas en su contexto y orienta una respuesta a una necesidad concreta.
+D: Es mixta y aplicada porque combina dos técnicas de recolección, aunque ambas se utilicen para interpretar experiencias.
+CORRECTA: C
+
+PREGUNTA: Un equipo encuentra que quienes consultan más un sistema de orientación profesional también reportan mayor seguridad al elegir carrera. Propone eliminar las entrevistas y concluir que el sistema produce esa seguridad. ¿Qué decisión distingue adecuadamente el hallazgo de la explicación aún pendiente?
+A: Aceptar la explicación causal si la asociación se observa en todos los participantes, sin revisar otras características de los usuarios.
+B: Mantener la asociación como hallazgo y examinar explicaciones alternativas, como que las personas más seguras consulten más el sistema.
+C: Descartar la asociación porque las respuestas sobre seguridad son percepciones y no pueden formar parte de una investigación.
+D: Sustituir la seguridad reportada por el número de consultas y considerar que esa medida demuestra la eficacia de la orientación.
+CORRECTA: B
+
+PREGUNTA: El sistema de archivo de una entidad localiza correctamente el 72 % de los documentos; el referente institucional exige el 92 %. El equipo afirma que «faltan veinte puntos porcentuales, por tanto ya se sabe qué debe investigarse». ¿Qué pregunta adicional permite convertir esa distancia en un problema de conocimiento?
+A: ¿Qué presupuesto se necesita para adquirir una herramienta que prometa cubrir los veinte puntos porcentuales de diferencia?
+B: ¿Qué fecha conviene fijar para exigir que todos los trabajadores alcancen la meta institucional de localización?
+C: ¿Qué nombre debería recibir el proyecto de mejora para comunicar con claridad la diferencia frente al referente?
+D: ¿Qué se desconoce sobre los factores asociados a los fallos de localización y por qué los antecedentes no permiten orientar la intervención en este sistema?
+CORRECTA: D
+
+PREGUNTA: Un estudio de clasificación de mensajes entrega un prototipo y demuestra que sus errores se concentran en expresiones regionales ausentes de los datos de desarrollo. ¿Qué formulación diferencia la contribución científica de la práctica sin confundirlas?
+A: La evidencia sobre el patrón de errores y sus condiciones es la contribución científica; el prototipo que permite aplicar y revisar la clasificación es la práctica.
+B: El prototipo es la contribución científica porque contiene un algoritmo; el patrón de errores es la práctica porque se observa en mensajes reales.
+C: El número de funciones del prototipo es la contribución científica; la cantidad de mensajes examinados es la contribución práctica.
+D: La publicación del prototipo es la contribución científica; afirmar que funcionará en otras regiones es la contribución práctica.
+CORRECTA: A
+
+PREGUNTA: Un método de asignación de turnos se evalúa en dos centros con atención por cita y demanda estable. Los resultados son favorables. Un tercer centro atiende sin cita y enfrenta llegadas muy variables. ¿Qué recomendación respeta los límites de la evidencia obtenida?
+A: Adoptar el método sin evaluación adicional, pues compartir la actividad de atención hace equivalentes las condiciones de los tres centros.
+B: Excluir definitivamente el método del tercer centro, pues cualquier diferencia de contexto demuestra que sus resultados no son transferibles.
+C: Examinar su desempeño bajo llegadas variables antes de trasladar la conclusión, indicando que la evidencia actual corresponde a atención por cita y demanda estable.
+D: Aplicar al tercer centro el promedio de resultados de los otros dos, pues reunir sus observaciones elimina la diferencia de condiciones.
+CORRECTA: C
+
+PREGUNTA: Se propone evaluar una interfaz para que personas con baja visión puedan completar consultas de saldo. La prueba prevista consiste en mostrar capturas de pantalla a diseñadores y pedirles que valoren su apariencia. ¿Qué modificación conecta la evaluación con la función y la población delimitadas?
+A: Pedir a más diseñadores que califiquen las capturas y usar su acuerdo como evidencia de que los usuarios completarán las consultas.
+B: Observar a personas con baja visión realizando consultas de saldo y medir su finalización y dificultades frente a una interfaz de referencia.
+C: Consultar a personas con baja visión cuál captura prefieren y usar la preferencia como sustituto de la ejecución de consultas de saldo.
+D: Observar a diseñadores sin dificultades visuales realizando las consultas y transferir su desempeño a la población delimitada.
+CORRECTA: B
+
+PREGUNTA: Una red de centros culturales publica horarios de actividades. Se ha documentado que las cancelaciones tardan en reflejarse; una meta interna exige actualizarlas en una hora. Los antecedentes no aclaran si la demora se concentra en la aprobación o en la publicación. ¿Qué conjunto de decisiones mantiene coherentes los cuatro pilares?
+A: Describir la difusión de horarios; usar una hora como referente; preguntar qué aplicación comprar; comparar el precio de dos plataformas de publicación.
+B: Describir la difusión de horarios; usar una hora como referente; dar por demostrada la demora de aprobación; diseñar una automatización para eliminarla.
+C: Describir la difusión de horarios; usar la automatización como estado ideal; examinar las etapas de demora; valorar la cantidad de funciones implementadas.
+D: Describir la difusión de horarios; usar una hora como referente; precisar la incertidumbre entre etapas; medir sus tiempos para orientar la intervención.
+CORRECTA: D
+
+PREGUNTA: Un equipo plantea comparar dos métodos de detección de archivos repetidos porque cree que nadie los ha contrastado. La revisión encuentra una comparación rigurosa en condiciones equivalentes a las previstas. ¿Qué decisión permite revisar el proyecto sin inventar una brecha?
+A: Mantener la justificación de ausencia de comparación, aclarando únicamente que el estudio previo se realizó en otra organización.
+B: Examinar qué incertidumbre pertinente queda abierta o si existe una razón explícita para replicar, y ajustar la pregunta y la contribución en consecuencia.
+C: Cambiar el nombre de uno de los métodos para conservar la pregunta y presentar la combinación como una comparación todavía no realizada.
+D: Convertir la instalación de ambos métodos en la nueva brecha, pues su ausencia local reemplaza la necesidad de conocimiento originalmente planteada.
+CORRECTA: B
